@@ -48,7 +48,7 @@ public class CoffeeMachine {
                     coffeeBeans = coffeeBeans - 16;
                     disposableCups = disposableCups - 1;
                     money = money + 4;
-                    System.out.println("Finished making your espresso!");
+                    System.out.println("Finished making your espresso!\n");
                 } else
                     System.out.println("Not enough resources! \n");
                 menu();
@@ -64,7 +64,7 @@ public class CoffeeMachine {
                     coffeeBeans = coffeeBeans - 20;
                     disposableCups = disposableCups - 1;
                     money += 7;
-                    System.out.println("Finished making your latte!");
+                    System.out.println("Finished making your latte!\n");
                 } else
                     System.out.println("Not enough resources! \n");
                 menu();
@@ -80,7 +80,7 @@ public class CoffeeMachine {
                     coffeeBeans -= 12;
                     disposableCups -= 1;
                     money += 6;
-                    System.out.println("Finished making your cappuccino!");
+                    System.out.println("Finished making your cappuccino!\n");
                 } else
                     System.out.println("Not enough resources! \n");
                 menu();
@@ -97,31 +97,32 @@ public class CoffeeMachine {
     }
 
     public static void fillCoffeeMachine() {
-        System.out.println("\nWrite how many ml of water do you want to add:");
+        System.out.println("\nEnter the amount of water you are adding (in ml):");
         water = water + scanner.nextInt();
-        System.out.println("Write how many ml of milk do you want to add:");
+        System.out.println("Enter the amount of milk you are adding (in ml):");
         milk = milk + scanner.nextInt();
-        System.out.println("Write how many grams of coffee beans do you want to add:");
+        System.out.println("Enter the amount of coffeebeans you are adding (in grams):");
         coffeeBeans = coffeeBeans + scanner.nextInt();
-        System.out.println("Write how many disposable cups of coffee do you want to add:");
+        System.out.println("Enter the number of disposable cups that you are adding:");
         disposableCups = disposableCups + scanner.nextInt();
+        System.out.println(" ");
         menu();
     }
 
     public static void checkCapacityOfCoffeeMachine() {
         System.out.println("\nThe coffee machine has:");
-        System.out.println(water + " of water");
-        System.out.println(milk + " of milk");
-        System.out.println(coffeeBeans + " of coffee beans");
-        System.out.println(disposableCups + " of disposable cups");
-        System.out.println("$" + money + " of money");
+        System.out.println(water + "ml of water");
+        System.out.println(milk + "ml of milk");
+        System.out.println(coffeeBeans + "g of coffee beans");
+        System.out.println(disposableCups + " disposable cups");
+        System.out.println("Balance: " + "$" + money);
         System.out.print("\n");
         menu();
     }
     
 
     public static void takeMoneyFromCoffeeMachine() {
-        System.out.println("I gave you $" + money);
+        System.out.println("Withdrew $" + money);
         money = 0;
         menu();
     }
