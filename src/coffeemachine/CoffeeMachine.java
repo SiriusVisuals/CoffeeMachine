@@ -48,6 +48,7 @@ public class CoffeeMachine {
                     coffeeBeans = coffeeBeans - 16;
                     disposableCups = disposableCups - 1;
                     money = money + 4;
+                    System.out.println("Finished making your espresso!");
                 } else
                     System.out.println("Not enough resources! \n");
                 menu();
@@ -63,6 +64,7 @@ public class CoffeeMachine {
                     coffeeBeans = coffeeBeans - 20;
                     disposableCups = disposableCups - 1;
                     money += 7;
+                    System.out.println("Finished making your latte!");
                 } else
                     System.out.println("Not enough resources! \n");
                 menu();
@@ -78,6 +80,7 @@ public class CoffeeMachine {
                     coffeeBeans -= 12;
                     disposableCups -= 1;
                     money += 6;
+                    System.out.println("Finished making your cappuccino!");
                 } else
                     System.out.println("Not enough resources! \n");
                 menu();
